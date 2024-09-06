@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    display: inherit;
+    margin: 0;
+    background: #bbbbbb4a;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    padding: 50px;
+
+
+}
+
+input, label, textarea {
+    display: block;
+
+}
+
+h1 {
+    margin: 20px;
+    padding: 10px 0;
+
+}
+
+hr {
+
+}
+
+label {
+    font-size: 20px;
+    margin: 20px 0 -5px 20px;
+}
+
+input {
+
+    width: 100%;
+    margin: 10px;
+    height: 3rem;
+    background: white;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    border: none;
+
+}
+.inputTextare{
+    height: 3rem;
+}
+
+/*Formulario*/
+.gridDuas{
+    display: grid;
+    grid-template-columns: 1fr  1fr; /* Duas colunas de tamanhos iguais */
+    gap: 20px; /* Espaçamento entre as colunas */
+
+
+}
+.gridTres{
+    display: grid;
+    grid-template-columns: 1fr  1fr 1fr; /* Duas colunas de tamanhos iguais */
+    gap: 20px; /* Espaçamento entre as colunas */
+}
+/*Fima*/
+
+
+
+
+.btnGerar {
+    display: block;
+    padding: 15px 25px;
+    margin: 20px;
+    background: cornflowerblue;
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+}
+
+.btnGerar:hover {
+    background: antiquewhite;
+    color: black;
+}
+
+
+.emissor {
+    display: grid;
+    grid-template-columns:  1fr 1fr; /* Duas colunas de tamanhos iguais */
+    gap: 10px; /* Espaçamento entre as colunas */
+    margin: 10px;
+}
+
+.emissorItens {
+    margin: 20px;
+}
+
+.negrito {
+    font-weight: bold;
+}
+
+.emissorItem {
+    margin: .1rem;
+    text-align: end;
+    font-size: 1.6rem;
+}
+
+.titulo {
+    margin: 0;
+    font-size: 4.6rem;
+}
+
+.subtitulo {
+    position: absolute;
+    margin-top: 6rem;
+    font-size: 50px;
+}
+
+.dadosClietes {
+    display: grid;
+    grid-template-columns: 29rem  1fr; /* Duas colunas de tamanhos iguais */
+    gap: 1px; /* Espaçamento entre as colunas */
+    margin: 10px;
+    font-size: 1.8rem;
+
+}
+
+.descricaoServico {
+
+    position: relative;
+    top: -18px;
+    margin: 0;
+    padding-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.dadosClietesItens {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Duas colunas de tamanhos iguais */
+    gap: 5px; /* Espaçamento entre as colunas */
+    margin: .1rem;
+    font-size: 1.9rem;
+}
+.dadosClietesItens p{
+    margin: 0;
+}
+
+.valoresGeral {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Duas colunas de tamanhos iguais */
+    padding: 0;
+   text-align: left;
+}
+.valoresGeral p {
+
+    position: relative;
+    top: -18px;
+    left: -10px;
+    margin-left: 3rem;
+    font-size: 1.9rem;
+    text-align: left;
+}
+.outrasInformacao{
+    font-size: 1.9rem;
+}
+.tabela{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.menu ul{
+
+    list-style: none;   /* Remove marcadores da lista */
+    padding: 0;
+    margin: 0;
+    display: flex;      /* Coloca os itens em linha */
+    justify-content: left; /* Centraliza os itens */
+
+}
+.menu ul li {
+    margin: 0 15px;     /* Espaçamento horizontal entre os itens */
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.menu ul li a:hover {
+    background-color: #ccc;
+}
+
