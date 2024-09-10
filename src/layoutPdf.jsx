@@ -1,16 +1,11 @@
 import React from 'react';
 import generatePDF, {Margin} from "react-to-pdf";
-import Form from "./Forms/Form.jsx";
-import App from "./App.jsx";
-import Orcamento from "./orcamento.jsx";
 
 
 const LayoutPdf = ({dados}) => {
     const [teste, setteste] = React.useState('');
 
-
     if (!dados) return null;
-
     const personaliza = {
         method: 'open',
         page: {
@@ -28,14 +23,13 @@ const LayoutPdf = ({dados}) => {
         const gerar = generatePDF(recuperarConteudo, personaliza)
         if (gerar) {
             setteste(null)
-
         }
-
     }, [])
+    const data = new Date();
 
     return (
         <>
-            {teste === null ? <h2>Gerado Com sucesso</h2> :
+            {teste === null ? '' :
                 <div id="conteudo" className="conteudoPDF">
 
                     <div className="emissor">
@@ -53,7 +47,7 @@ const LayoutPdf = ({dados}) => {
 
                     <div>
                         <div className="dadosClietes">
-                            <p><span className="negrito">Data da emissão: </span>2024-09-06</p>
+                            <p><span className="negrito">Data da emissão: </span> {dados.dataEmissao.split('-').reverse().join('/')}</p>
                             <p><span className="negrito">Situação do Orçamento:</span> Aguardando um retorno</p>
                         </div>
                         <p className="descricaoServico">{dados.descricao}</p>
@@ -98,7 +92,7 @@ const LayoutPdf = ({dados}) => {
 
                     <div className="outrasInformacao">
                         <h2>Outras Informações</h2>
-                        <p><span className="negrito">Validade até:</span> {dados.dataOrcamento}</p>
+                        <p><span className="negrito">Validade até:</span> {dados.dataOrcamento.split('-').reverse().join('/')}</p>
                         <p><span className="negrito">Forma de pagamento:</span> {dados.formaPg}</p>
                     </div>
 
